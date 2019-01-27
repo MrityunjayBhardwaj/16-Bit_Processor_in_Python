@@ -1,0 +1,28 @@
+1. PreProcess the file
+    *remove the white spaces and comments
+
+2. Initialize the Symbol table
+    *Construct and Add predefined Symbols in symbol table
+
+3. First Pass Processing
+    *Trace the lines and find the "(Label)" symbol
+    *Add the Label in Symbol table along with the line address next to it.
+    *and then remove all the Label defination
+
+4. Second Pass:
+    NOTE: the variable address starts from RAM[16] because R0-R15 are researved symbols according to specification.
+    Set n = 16
+
+   *Trace the program line by line if we encounter @symbol:
+        search that symbol inside Symbol table
+            {if we found it inside. then,replace this symbol to its corresponding value.}
+            {if not, then append this symbol inside Symbol table along with value = n 
+            (increment the value)n++}
+        
+5. Translate all the decimal symbols to binary
+
+6. if the instruction is C then translate the program using the specification table.
+
+
+then finally write the translation to the  Binarry instruction file in order to feed it to our Mechine!!! for processing
+
